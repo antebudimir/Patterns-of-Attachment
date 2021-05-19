@@ -1,0 +1,49 @@
+// Links & Buttons
+.showcase-link {
+	@extend %btn;
+
+	@include respond-to-width(1024px) {
+		&:hover {
+			@include hover-state;
+		}
+
+		&:focus {
+			@include focus-state;
+		}
+	}
+}
+
+.btn-more {
+	@extend %btn;
+	align-self: center;
+	margin-bottom: 0.7rem;
+	font-size: 1rem;
+	animation: none;
+
+	@include respond-to-width(1024px) {
+		&:hover {
+			@include hover-state;
+		}
+
+		&:focus {
+			@include focus-state;
+		}
+	}
+}
+
+.btn {
+	@extend %btn;
+	@include respond-to-width(1024px) {
+		&:hover {
+			@include hover-state;
+		}
+
+		&:focus {
+			@include focus-state;
+		}
+	}
+}
+
+#subscribe .btn {
+	margin: 1.7rem 0 1rem;
+}

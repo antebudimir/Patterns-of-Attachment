@@ -1,0 +1,17 @@
+.article {
+	@include flex-layout(column, nowrap);
+	border-radius: $border-radius-article;
+	margin: 1rem 0;
+	padding: 0.1rem 0.5rem 0.7rem;
+	background: linear-gradient(
+		120deg,
+		rgba(47, 42, 42, 0.858) 10%,
+		rgb(15, 15, 15) 50%,
+		rgb(10, 10, 10) 20%,
+		rgba(20, 20, 20, 1) 100%
+	);
+
+	@include respond-to-width(1024px) {
+		padding: 0.4rem 1.2rem 0.7rem;
+	}
+}

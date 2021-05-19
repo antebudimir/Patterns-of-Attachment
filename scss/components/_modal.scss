@@ -1,0 +1,57 @@
+// Modal
+.modal {
+	display: none;
+
+	@include respond-to-width(1024px) {
+		@include modal;
+	}
+}
+
+.open {
+	display: block;
+}
+
+.content {
+	@include respond-to-width(1024px) {
+		border-radius: 0.5rem;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 50rem;
+		padding: 1rem 1.5rem;
+		background: $header-bg;
+		transform: translate(-50%, -50%);
+
+		& h2 {
+			color: $text-modal;
+		}
+
+		& p {
+			color: $text-modal;
+		}
+
+		// color of text when modal is open
+		& .patterns {
+			color: rgb(223, 223, 0);
+		}
+	}
+}
+
+.close-button {
+	@include respond-to-width(1024px) {
+		float: right;
+		border: 1px solid $text-secondary;
+		border-radius: 0.25rem;
+		width: 1.5rem;
+		background: $text-primary;
+		color: $text-modal;
+		line-height: 1.2rem;
+		text-align: center;
+		cursor: pointer;
+
+		&:hover {
+			background: $text-secondary;
+			color: $header-bg;
+		}
+	}
+}

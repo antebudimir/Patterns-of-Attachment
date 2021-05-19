@@ -1,0 +1,9 @@
+#video {
+	@include respond-to-width(1024px) {
+		@include article-max-width;
+	}
+
+	& .article {
+		@include article-align;
+	}
+}

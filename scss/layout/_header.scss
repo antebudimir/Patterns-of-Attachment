@@ -1,0 +1,15 @@
+// Header
+.title {
+	padding: 0.7rem 1rem 0.4rem;
+	background: $header-bg;
+	text-align: center;
+
+	@include respond-to-width(600px) {
+		padding: 1.7rem 1rem 1.2rem;
+	}
+}
+
+#home-thanks .title,
+#home-error .title {
+	background: $text-tertiary;
+}

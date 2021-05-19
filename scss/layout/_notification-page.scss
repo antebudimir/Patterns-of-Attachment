@@ -1,0 +1,33 @@
+// Thank you
+#home-thanks,
+#home-error {
+	@include sticky-footer;
+}
+
+#home-thanks .divider,
+#home-error .divider {
+	margin: 3rem 0;
+}
+
+.wrapper {
+	flex: 1; // sticking the footer
+	@include flex-layout(column, nowrap);
+	justify-content: center;
+}
+
+#thank-you,
+#error {
+	margin: 0 auto;
+	padding: 0 1rem;
+}
+
+#thank-you .article,
+#error .article {
+	padding: 0.5rem;
+}
+
+#thank-you p,
+#error p {
+	margin: 0;
+	text-align: center;
+}

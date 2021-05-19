@@ -1,0 +1,12 @@
+// Soundcloud player
+#soundcloud {
+	border: none;
+	border-radius: $border-radius-primary;
+	width: 100%;
+	height: 30rem;
+	object-fit: cover;
+
+	@include respond-to-width(1024px) {
+		height: 35rem;
+	}
+}

@@ -1,0 +1,47 @@
+#connect {
+	@include respond-to-width(1024px) {
+		@include article-max-width;
+	}
+
+	& .article {
+		@include article-align;
+	}
+}
+
+.icons {
+	@include flex-evenly;
+
+	@include respond-to-width(1024px) {
+		& a:focus {
+			@include focus-state;
+		}
+	}
+}
+
+.fa {
+	font-size: 2.2rem;
+	padding: 0.7rem;
+
+	&:hover {
+		color: yellow;
+		transform: scale(1.2);
+		transition: transform 0.1s ease-in;
+	}
+}
+
+// icon colors:
+.fa-bandcamp {
+	color: rgb(29, 160, 195);
+}
+.fa-facebook {
+	color: rgb(59, 89, 152);
+}
+.fa-youtube {
+	color: rgb(255, 0, 0);
+}
+.fa-soundcloud {
+	color: rgb(254, 80, 0);
+}
+.fa-spotify {
+	color: rgb(30, 215, 96);
+}

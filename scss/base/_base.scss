@@ -1,0 +1,105 @@
+// Base - global styles
+* {
+	@include root-base;
+}
+
+html {
+	background: linear-gradient(
+		120deg,
+		rgba(0, 0, 4, 1) 30%,
+		rgb(10, 10, 10) 50%,
+		rgb(15, 15, 15) 20%,
+		rgba(75, 66, 66, 0.858) 100%
+	);
+	color: $text-primary;
+
+	@include respond-to-width(768px) {
+		font-size: 1.2rem;
+	}
+
+	@include respond-to-w-and-h(2200px, 1200px) {
+		font-size: 150%;
+	}
+
+	@include respond-to-height(2000px) {
+		font-size: 250%;
+	}
+}
+
+h1 {
+	color: $text-secondary;
+	font-size: 1.2rem;
+	line-height: 1.4;
+	letter-spacing: 3px;
+	text-shadow: 2px 2px #000000;
+
+	@include respond-to-width(1055px) {
+		font-size: 1.5rem;
+	}
+}
+
+#home-thanks h1,
+#home-error h1 {
+	color: $header-bg;
+	text-shadow: 2px 2px #ffffff;
+}
+
+h2 {
+	margin: 0.5rem 0;
+	font-size: 1.15rem;
+}
+
+.hidden-visually {
+	@include hidden-visually;
+}
+
+p {
+	margin: 0 0 1rem;
+	line-height: 1.6;
+}
+
+ul,
+li {
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+input,
+select,
+textarea,
+button {
+	color: inherit;
+	font-size: inherit;
+}
+
+label,
+input {
+	display: block;
+}
+
+label {
+	margin: 1rem 0;
+	font-size: 1.15rem;
+	font-weight: 600;
+}
+
+input {
+	outline: none;
+	border: none;
+	border-bottom: 1px solid $header-bg;
+	width: 17rem;
+	margin: 1.5rem auto 0;
+	background: transparent;
+	text-align: center;
+
+	&:focus {
+		border: 1px solid $header-bg;
+		border-radius: $border-radius-primary;
+		min-width: fit-content;
+		padding: 0.5rem 0;
+		color: $text-secondary;
+	}
+}

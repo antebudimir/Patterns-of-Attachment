@@ -1,0 +1,49 @@
+// Navbar
+#navbar {
+	@include sticky-navbar;
+	background: $header-bg;
+}
+
+.menu {
+	@include flex-evenly;
+	@include respond-to-width(1366px) {
+		justify-content: center;
+	}
+}
+
+.menu a {
+	display: block;
+	padding: 1.3rem 0.9rem;
+	color: $text-secondary;
+	font-weight: 700;
+
+	@include respond-to-width(768px) {
+		padding: 1.3rem 3rem;
+	}
+
+	@include respond-to-width(1024px) {
+		font-size: 1.2rem;
+
+		&:focus {
+			@include focus-state;
+		}
+	}
+
+	@include respond-to-width(1366px) {
+		padding: 1.5rem 2.9rem;
+	}
+}
+
+.menu li:nth-child(1) a,
+.menu li:nth-child(6) a {
+	display: none;
+	@include respond-to-width(1366px) {
+		display: inherit;
+	}
+}
+
+.menu li:hover {
+	border-radius: $border-radius-primary;
+	background: $footer-gradient;
+	color: $header-bg;
+}

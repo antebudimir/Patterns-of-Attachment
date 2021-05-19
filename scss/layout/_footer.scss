@@ -1,0 +1,16 @@
+#footer {
+	padding: 1rem 0;
+	background: $footer-gradient;
+	font-size: 0.9rem;
+	font-weight: 900;
+	text-align: center;
+
+	@include respond-to-width(1024px) {
+		padding: 1.5rem 0;
+		font-size: 1.1rem;
+	}
+
+	& span {
+		color: $text-secondary;
+	}
+}

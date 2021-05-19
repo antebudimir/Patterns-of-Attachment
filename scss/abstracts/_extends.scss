@@ -1,0 +1,20 @@
+// Links & Buttons
+%btn {
+	outline: none;
+	border: 1px solid $text-secondary;
+	border-radius: $border-radius-primary;
+	padding: 0.5rem 0.6rem;
+	background: $header-bg;
+	color: $text-secondary;
+	font-weight: 900;
+	cursor: pointer;
+	animation: glow 6s linear infinite;
+
+	@keyframes glow {
+		50% {
+			text-shadow: 0 0 5px rgb(128, 8, 8), 0 0 5px rgb(128, 26, 8),
+				0 0 5px rgb(128, 18, 8), 5px 5px 5px rgb(64, 41, 10);
+			color: rgb(233, 178, 0);
+		}
+	}
+}

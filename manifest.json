@@ -1,0 +1,37 @@
+{
+	"name": "Patterns of Attachment",
+	"short_name": "POA",
+	"description": "Electronic Music Project from Croatia",
+	"start_url": "https://patternsofattachment.antebudimir.com/",
+	"scope": ".",
+	"background_color": "#c30000",
+	"theme_color": "#c30000",
+	"display": "standalone",
+	"orientation": "portrait",
+	"dir": "ltr",
+	"lang": "en",
+	"categories": ["music", "instrumental", "synthpop", "electronic"],
+	"icons": [
+		{
+			"src": "img/icon-512x512.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		},
+		{
+			"src": "img/icon-384x384.png",
+			"sizes": "384x384",
+			"type": "image/png"
+		},
+		{
+			"src": "img/icon-256x256.png",
+			"sizes": "256x256",
+			"type": "image/png"
+		},
+		{
+			"src": "img/icon-192x192.png",
+			"sizes": "192x192",
+			"type": "image/png",
+			"purpose": "any maskable"
+		}
+	]
+}

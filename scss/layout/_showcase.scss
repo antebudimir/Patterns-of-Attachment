@@ -1,0 +1,24 @@
+// SHOWCASE
+#showcase {
+	@include flex-center;
+	align-items: flex-end;
+	height: calc(100vh - 4.35rem);
+	background: url('../img/POA-bg\ -\ mobile.jpg') center center/cover;
+	padding-bottom: 1rem;
+
+	@include respond-to-width(600px) {
+		height: calc(100vh - 2.75rem);
+	}
+
+	@include respond-to-width(768px) {
+		height: calc(100vh - 4.55rem);
+	}
+
+	@include respond-to-width(1024px) {
+		background: url(../img/POA-bg.jpg) center center/cover;
+	}
+
+	@include respond-to-width(1055px) {
+		height: calc(100vh - 5rem);
+	}
+}

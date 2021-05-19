@@ -1,0 +1,152 @@
+// All mixins here:
+@mixin root-base {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+}
+
+// FONTS
+@mixin h1-font {
+	font-family: 'Abnes';
+}
+
+@mixin main-font {
+	font-family: 'Chakra Petch', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+}
+
+// HEADINGS
+@mixin heading {
+	line-height: 1.2;
+}
+
+@mixin heading-1 {
+	@include heading;
+	font-size: 3.3rem;
+}
+
+@mixin heading-2 {
+	@include heading;
+	font-size: 3rem;
+}
+
+@mixin heading-3 {
+	@include heading;
+	font-size: 1.5rem;
+}
+
+@mixin heading-4 {
+	@include heading;
+	font-size: 1.3rem;
+}
+
+@mixin heading-5 {
+	@include heading;
+	font-size: 1rem;
+}
+
+@mixin heading-6 {
+	@include heading;
+	font-size: 0.9rem;
+}
+
+// FLEXBOX
+// Layout:
+@mixin flex-layout($direction, $wrap) {
+	display: flex;
+	flex-flow: $direction $wrap;
+}
+
+@mixin sticky-footer {
+	display: flex;
+	flex-flow: column nowrap;
+	min-height: 100vh;
+}
+
+@mixin flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin flex-evenly {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+@mixin sticky-navbar {
+	z-index: 10;
+	position: sticky;
+	top: 0;
+}
+
+@mixin border-radius {
+	border-radius: 0.2rem;
+}
+
+// Articles
+@mixin article-align {
+	margin: 0.5rem 1rem;
+	text-align: center;
+}
+
+@mixin article-max-width {
+	max-width: 62.6rem;
+	margin: 0 auto 1.3rem;
+}
+
+// Modal
+@mixin modal {
+	z-index: 100;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.7);
+}
+
+// focus states
+@mixin focus-state {
+	outline: none;
+	border-radius: 0.2rem;
+	border: 1px solid yellow;
+}
+
+@mixin hover-state {
+	background: $footer-gradient;
+	transform: scale(1.04);
+	transition: transform 0.1s ease-in;
+}
+
+// Visually hidden
+@mixin hidden-visually {
+	position: absolute;
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	overflow: hidden;
+	width: 1px;
+	height: 1px;
+	white-space: nowrap;
+}
+
+// Media queries
+@mixin respond-to-width($media) {
+	@media only screen and (min-width: $media) {
+		@content;
+	}
+}
+
+@mixin respond-to-height($media) {
+	@media only screen and (min-height: $media) {
+		@content;
+	}
+}
+
+@mixin respond-to-w-and-h($width, $height) {
+	@media only screen and (min-width: $width) and (min-height: $height) {
+		@content;
+	}
+}
