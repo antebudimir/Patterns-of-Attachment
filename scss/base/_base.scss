@@ -14,7 +14,7 @@ html {
 	color: $text-primary;
 
 	@include respond-to-width(768px) {
-		font-size: 1.2rem;
+		font-size: 120%;
 	}
 
 	@include respond-to-w-and-h(2200px, 1200px) {
