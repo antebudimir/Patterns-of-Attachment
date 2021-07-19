@@ -1,7 +1,6 @@
 // SHOWCASE
 #showcase {
-	@include flex-center;
-	align-items: flex-end;
+	@include flex-alignment(center, flex-end);
 	height: calc(100vh - 4.35rem);
 	background: url('../img/POA-bg\ -\ mobile.jpg') center center/cover;
 	padding-bottom: 1rem;
