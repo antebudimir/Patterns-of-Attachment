@@ -1,0 +1,66 @@
+// @font-face declarations:
+@font-face {
+	font-family: 'Abnes';
+	src: url('../fonts/abnes-Regular.woff');
+}
+
+@font-face {
+	font-family: 'Chakra Petch';
+	src: url('../fonts/ChakraPetch-Regular.woff');
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: 'Chakra Petch';
+	src: url('../fonts/ChakraPetch-Medium.woff');
+	font-weight: 500;
+}
+
+@font-face {
+	font-family: 'Chakra Petch';
+	src: url('../fonts/ChakraPetch-SemiBold.woff');
+	font-weight: 600;
+}
+
+@font-face {
+	font-family: 'Chakra Petch';
+	src: url('../fonts/ChakraPetch-Bold.woff');
+	font-weight: 700;
+}
+
+// All fonts declared:
+html {
+	font-family: 'Chakra Petch', sans-serif;
+	font-weight: 400;
+}
+
+input,
+select,
+textarea,
+button {
+	font-family: inherit;
+}
+
+h1 {
+	color: $text-secondary;
+	font-family: 'Abnes';
+	font-weight: bold;
+	font-size: 1.2rem;
+	line-height: 1.4;
+	letter-spacing: 3px;
+	text-shadow: 2px 2px #000000;
+
+	@include respond-to-width(1055px) {
+		font-size: 1.5rem;
+	}
+}
+
+h2 {
+	margin: 0.5rem 0;
+	font-size: 1.15rem;
+}
+
+p {
+	margin: 0 0 1rem;
+	line-height: 1.6;
+}
