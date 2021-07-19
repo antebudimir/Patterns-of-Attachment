@@ -4,6 +4,12 @@
 	@include sticky-footer;
 }
 
+#home-thanks h1,
+#home-error h1 {
+	color: $primary-color;
+	text-shadow: 2px 2px #ffffff;
+}
+
 #home-thanks .divider,
 #home-error .divider {
 	margin: 3rem 0;
