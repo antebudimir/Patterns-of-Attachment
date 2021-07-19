@@ -1,17 +1,31 @@
 // Navbar
 #navbar {
 	@include sticky-navbar;
-	background: $header-bg;
+	background: $primary-color;
 }
 
-.menu {
+#menu {
 	@include flex-evenly;
 	@include respond-to-width(1366px) {
 		justify-content: center;
 	}
 }
 
-.menu a {
+.menu-item:nth-of-type(1),
+.menu-item:nth-of-type(6) {
+	display: none;
+	@include respond-to-width(1366px) {
+		display: initial;
+	}
+}
+
+.menu-item:hover {
+	border-radius: $border-radius-primary;
+	background: $primary-gradient;
+	color: $primary-color;
+}
+
+.menu-link {
 	display: block;
 	padding: 1.3rem 0.9rem;
 	color: $text-secondary;
@@ -32,18 +46,4 @@
 	@include respond-to-width(1366px) {
 		padding: 1.5rem 2.9rem;
 	}
-}
-
-.menu li:nth-child(1) a,
-.menu li:nth-child(6) a {
-	display: none;
-	@include respond-to-width(1366px) {
-		display: inherit;
-	}
-}
-
-.menu li:hover {
-	border-radius: $border-radius-primary;
-	background: $footer-gradient;
-	color: $header-bg;
 }
