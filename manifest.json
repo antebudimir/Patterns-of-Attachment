@@ -2,7 +2,7 @@
 	"name": "Patterns of Attachment",
 	"short_name": "POA",
 	"description": "Electronic Music Project from Croatia",
-	"start_url": "https://patternsofattachment.antebudimir.com/",
+	"start_url": "/",
 	"scope": ".",
 	"background_color": "#c30000",
 	"theme_color": "#c30000",
