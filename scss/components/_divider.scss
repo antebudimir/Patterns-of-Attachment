@@ -1,7 +1,8 @@
 // --Divider symbol--
 .divider {
 	text-align: center;
-}
-.divider img {
-	height: 5vh;
+
+	& img {
+		height: 5vh;
+	}
 }
