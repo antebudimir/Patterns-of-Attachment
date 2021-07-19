@@ -1,26 +1,13 @@
-// Root:
-@mixin root-base {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-	scroll-behavior: smooth;
-}
-
-// FONTS
-@mixin h1-font {
-	font-family: 'Abnes';
-}
-
-@mixin main-font {
-	font-family: 'Chakra Petch', sans-serif;
-	font-style: normal;
-	font-weight: 400;
-}
-
 // FLEXBOX
 @mixin flex-layout($direction, $wrap) {
 	display: flex;
 	flex-flow: $direction $wrap;
+}
+
+@mixin flex-alignment($justify, $align) {
+	display: flex;
+	justify-content: $justify;
+	align-items: $align;
 }
 
 @mixin sticky-footer {
@@ -44,10 +31,6 @@
 	z-index: 10;
 	position: sticky;
 	top: 0;
-}
-
-@mixin border-radius {
-	border-radius: 0.2rem;
 }
 
 // Articles
@@ -80,7 +63,7 @@
 }
 
 @mixin hover-state {
-	background: $footer-gradient;
+	background: $primary-gradient;
 	transform: scale(1.04);
 	transition: transform 0.1s ease-in;
 }
