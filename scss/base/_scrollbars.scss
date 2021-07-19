@@ -1,7 +1,7 @@
 // styles related to the scrollbars
 html,
 body {
-	scrollbar-color: $header-bg black;
+	scrollbar-color: $primary-color $secondary-color;
 }
 
 body::-webkit-scrollbar {
@@ -9,9 +9,9 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-	background: black;
+	background: $secondary-color;
 }
 
 body::-webkit-scrollbar-thumb {
-	background-color: $header-bg;
+	background-color: $primary-color;
 }

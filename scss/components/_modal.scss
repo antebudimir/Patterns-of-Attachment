@@ -13,13 +13,13 @@
 
 .content {
 	@include respond-to-width(1024px) {
-		border-radius: 0.5rem;
+		border-radius: $border-radius-secondary;
 		position: absolute;
 		top: 50%;
 		left: 50%;
 		width: 50rem;
 		padding: 1rem 1.5rem;
-		background: $header-bg;
+		background: $primary-color;
 		transform: translate(-50%, -50%);
 
 		& h2 {
@@ -41,7 +41,7 @@
 	@include respond-to-width(1024px) {
 		float: right;
 		border: 1px solid $text-secondary;
-		border-radius: 0.25rem;
+		border-radius: $border-radius-primary;
 		width: 1.5rem;
 		background: $text-primary;
 		color: $text-modal;
@@ -51,7 +51,7 @@
 
 		&:hover {
 			background: $text-secondary;
-			color: $header-bg;
+			color: $primary-color;
 		}
 	}
 }
