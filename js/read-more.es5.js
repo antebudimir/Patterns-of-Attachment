@@ -95,11 +95,10 @@ var ReadMore = (function () {
 
 		/**
 		 * Handle Click
-		 * Toggle Click eve
+		 * Toggle Click event
 		 */
 		handleClick: function (el) {
-			let readMoreButton = document.querySelectorAll('.btn-more'),
-				modal = document.querySelectorAll('.modal');
+			const readMoreButton = document.querySelectorAll('.btn-more');
 
 			// Read more < 1024px
 			if (window.innerWidth < 1024) {
@@ -128,10 +127,10 @@ var ReadMore = (function () {
 			else if (window.innerWidth > 1023) {
 				readMoreButton.forEach((button) => {
 					button.addEventListener('click', () => {
-						let moreLinkID = button.getAttribute('id');
-						let index = moreLinkID.split('_')[1];
+						const moreLinkID = button.getAttribute('id');
+						const index = moreLinkID.split('_')[1];
 
-						let modal = document.createElement('div');
+						const modal = document.createElement('div');
 						modal.setAttribute('class', 'modal');
 						modal.innerHTML = `<div class="content">
 												<button class="close-button" title="Close the window">&times;</button>
@@ -145,6 +144,21 @@ var ReadMore = (function () {
 						modal.classList.add('open');
 						body.style.overflow = 'hidden';
 
+						// disable closing of modal on click inside of the content box
+						document
+							.querySelector('.content')
+							.addEventListener('click', (event) => {
+								event.stopPropagation();
+							});
+
+						document
+							.querySelector('.close-button')
+							.addEventListener('click', () => {
+								modal.style.display = 'none';
+								body.style.overflow = 'unset';
+								modal.remove();
+							});
+
 						// close on outside click
 						modal.addEventListener('click', () => {
 							modal.style.display = 'none';
@@ -156,7 +170,7 @@ var ReadMore = (function () {
 			}
 		},
 
-		/**
+		/**k
 		 * Open All
 		 * Method to expand all instances on the page.
 		 */

@@ -21,7 +21,7 @@ if ('serviceWorker' in navigator) {
 }
 
 // SYNC
-async function registerPeriodicCheck() {
+const registerPeriodicCheck = async () => {
 	const registration = await navigator.serviceWorker.ready;
 	try {
 		await registration.periodicSync.register('latest-update', {
@@ -30,29 +30,18 @@ async function registerPeriodicCheck() {
 	} catch {
 		console.log('Periodic Sync could not be registered!');
 	}
-}
+};
 
-navigator.serviceWorker.ready.then((registration) => {
-	registration.periodicSync.getTags().then((tags) => {
-		if (tags.includes('latest-update')) skipDownloadingLatestUpdateOnPageLoad();
-	});
-});
-
-// Anime init:
-anime({
-	targets: '#showcase',
-	rotate: [180, -360],
-	duration: 3000,
-	easing: 'easeInOutSine',
-	direction: 'normal',
-	loop: false,
+navigator.serviceWorker.ready.then(async (registration) => {
+	const tags = await registration.periodicSync.getTags();
+	if (tags.includes('latest-update')) skipDownloadingLatestUpdateOnPageLoad();
 });
 
 // Read more init:
 ReadMore.init();
 
 // Youtube lazy loading
-(function () {
+(() => {
 	const youtubeVideos = document.querySelectorAll('.youtube');
 
 	youtubeVideos.forEach((video) => {

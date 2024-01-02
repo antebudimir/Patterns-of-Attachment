@@ -9,16 +9,30 @@
 }
 
 .icons {
-	@include flex-evenly;
+	@include flex-center;
+	flex-flow: row wrap;
+	gap: 0.6rem;
+
+	& a {
+		@include flex-center;
+		flex: 1 0 30%;
+	}
 
 	@include respond-to-width(1024px) {
+		@include flex-evenly;
+		gap: initial;
+
+		& a {
+			flex: content;
+		}
+
 		& a:focus {
 			@include focus-state;
 		}
 	}
 }
 
-.fa {
+.fab {
 	font-size: 2.2rem;
 	padding: 0.7rem;
 
@@ -44,4 +58,12 @@
 }
 .fa-spotify {
 	color: rgb(30, 215, 96);
+}
+.fa-deezer,
+.fa-apple,
+.fa-itunes {
+	color: rgb(255, 255, 255);
+}
+.fa-amazon {
+	color: rgb(0, 97, 174);
 }

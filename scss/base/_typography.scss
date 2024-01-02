@@ -1,12 +1,13 @@
 // @font-face declarations:
 @font-face {
-	font-family: 'Abnes';
-	src: url('../fonts/abnes-Regular.woff');
+	font-family: 'Dodger';
+	src: url('../fonts/Dodger.woff');
 }
 
 @font-face {
 	font-family: 'Chakra Petch';
 	src: url('../fonts/ChakraPetch-Regular.woff');
+	// src: url('../fonts/Montserrat-Regular.woff');
 	font-weight: normal;
 }
 
@@ -43,15 +44,14 @@ button {
 
 h1 {
 	color: $text-secondary;
-	font-family: 'Abnes';
-	font-weight: bold;
-	font-size: 1.2rem;
-	line-height: 1.4;
+	font-family: 'Dodger';
+	font-weight: normal;
+	font-size: 1.88rem;
 	letter-spacing: 3px;
 	text-shadow: 2px 2px #000000;
 
 	@include respond-to-width(1055px) {
-		font-size: 1.5rem;
+		font-size: 2.4rem;
 	}
 }
 
@@ -61,6 +61,7 @@ h2 {
 }
 
 p {
+	font-size: 1.1rem;
 	margin: 0 0 1rem;
 	line-height: 1.6;
 }

@@ -1,6 +1,8 @@
 // Modal
 .modal {
 	display: none;
+	position: relative;
+	z-index: -100;
 
 	@include respond-to-width(1024px) {
 		@include modal;
@@ -21,6 +23,7 @@
 		padding: 1rem 1.5rem;
 		background: $primary-color;
 		transform: translate(-50%, -50%);
+		z-index: 100;
 
 		& h2 {
 			color: $text-modal;
